@@ -30,7 +30,7 @@ header {
 .Upper {
     color: rgb(0, 0, 0);
     font-weight: bolder;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,6 +48,7 @@ header {
 
 .container {
     margin-top: 20vh;
+    /* border: 2px solid black; */
 }
 
 .box {
@@ -70,7 +71,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(6, 220, 244, 0.855);
+    background-color: rgba(199, 250, 127, 0.51);
 }
 
 @media screen and (max-width: 768px) {
@@ -125,6 +126,7 @@ header {
     /* position: relative; */
     /* display: block; */
     border: 2px solid black;
+    border-radius: 5px;
     width: 100%;
     height: 90%;
     object-fit: contain;
@@ -141,4 +143,19 @@ header {
     justify-content: center;
     align-items: center;
     padding-top: 40px;
+}
+
+.lowertext{
+    margin-top: 10vh;
+    margin-left: 77vw;
+    padding: 25px;
+    font-size: x-large;
+    font-style: italic;
+    border: 2px solid black ;
+    background-image: url(https://media.istockphoto.com/id/480975194/photo/sunrise-and-dramatic-clouds-over-lavender-field.jpg?s=612x612&w=0&k=20&c=9oOUcyMJrutCRxdOp0HYUz0avbuT4akmwKvL-aa_QkI=);
+    background-position: center;
+    color: cyan;
+}
+.fake{
+    height: 20vh;
 }
