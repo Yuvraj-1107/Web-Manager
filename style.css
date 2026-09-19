@@ -6,7 +6,7 @@
 }
 
 body{
-
+    
 }
 
 header {
@@ -15,6 +15,25 @@ header {
     font-size: x-large;
     margin-top: 5px;
     text-decoration: underline;
+    /*  */
+  font-family: 'Krona One', sans-serif;
+    
+    /* Font sizing and layout tweaks */
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+    /* THE DANGEROUS/COOL LOOK: Wide spacing with a sharp technical offset shadow */
+    letter-spacing: 6px; 
+    color: #000000; /* Solid black to stay highly readable on your cyan bar */
+    
+    /* Adds a high-contrast double shadow layer that makes it pop off the screen */
+    text-shadow: 
+        2px 2px 0px #ffffff, 
+        4px 4px 0px rgba(0, 0, 0, 0.8);
+        
+    /* Removes the basic browser underline */
+    text-decoration: none; 
 }
 
 .desc {
@@ -27,11 +46,11 @@ header {
     padding: 32px;
     border: 2px solid black;
     height: 70vh;
-    background-image: linear-gradient(rgba(248, 244, 244, 0.353), rgba(201, 195, 195, 0.436)), url(https://www.kiet.edu/_next/image/?url=%2Fassets%2Fimages%2Fkiet%2Fmain%2Fnew%2FWEB%20Banner.webp&w=3840&q=75&dpl=dpl_Aa5kQpUMDyFfkcsJM5u7K7e145SH);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.353), rgba(0, 0, 0, 0.436)), url(https://www.kiet.edu/_next/image/?url=%2Fassets%2Fimages%2Fkiet%2Fmain%2Fnew%2FWEB%20Banner.webp&w=3840&q=75&dpl=dpl_Aa5kQpUMDyFfkcsJM5u7K7e145SH);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: 0.8;
+    opacity: 9;
 }
 
 .Upper {
@@ -43,18 +62,30 @@ header {
     justify-content: center;
     align-items: center;
     /* font-size: clamp(1.4rem, 3vw, 30px); */
-    font-family: 'Syne', sans-serif;
+    /* font-family: 'Syne', sans-serif;
       font-size: 35px;
       font-weight: 800;
       letter-spacing: 2px;
       
       /* The Magic Translucent Formula: */
       /* color: rgba(255, 255, 255, 0.25); Low opacity white */
-      backdrop-filter: blur(4px);        /* Softens the background details behind text */
-      mix-blend-mode: overlay;           /* Blends beautifully with background colors */
+      /* backdrop-filter: blur(4px);        Softens the background details behind text */
+      /* mix-blend-mode: overlay;           Blends beautifully with background colors */
       
       /* Subtle border texture around letters */
-      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+      /* -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4); */ 
+      color: rgba(237, 231, 231, 0.91);   
+    backdrop-filter: blur(28px);          /* Blurs the image shapes *behind* the letters */
+    -webkit-backdrop-filter: blur(6px);  /* Safari support */
+    mix-blend-mode: overlay;             /* Blends text contrast with the image colors */
+    
+    /* 2. Sharp letter outline for legibility */
+    -webkit-text-stroke: 1.5px rgb(255, 255, 255);
+     font-size: 35px;
+    /* 3. Recommended styling details for maximum coolness */
+    font-weight: 800;
+    text-transform: uppercase;
+
 }
 
 .subhead {
