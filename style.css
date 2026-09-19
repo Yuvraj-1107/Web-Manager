@@ -16,7 +16,9 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
+    box-sizing: border-box;
     margin-top: 40px;
+    padding: 32px;
     border: 2px solid black;
     height: 70vh;
     background-image: linear-gradient(rgba(248, 244, 244, 0.353), rgba(201, 195, 195, 0.436)), url(https://www.kiet.edu/_next/image/?url=%2Fassets%2Fimages%2Fkiet%2Fmain%2Fnew%2FWEB%20Banner.webp&w=3840&q=75&dpl=dpl_Aa5kQpUMDyFfkcsJM5u7K7e145SH);
@@ -32,7 +34,16 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: clamp(1.4rem, 3vw, 30px);
+}
+
+.subhead {
+    margin-top: 15vh;
+    text-align: center;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    text-decoration: underline;
 }
 
 .container {
@@ -63,8 +74,50 @@ header {
 }
 
 @media screen and (max-width: 768px) {
-    .grid{
+    header {
+        font-size: large;
+    }
+
+    .desc {
+        min-height: 45vh;
+        height: auto;
+        margin: 24px 12px 0;
+        padding: 24px 16px;
+    }
+
+    .Upper {
+        font-size: 1.35rem;
+        line-height: 1.4;
+    }
+
+    .subhead {
+        margin: 48px 16px 0;
+        font-size: 1.5rem;
+    }
+
+    .container {
+        margin-top: 48px;
+    }
+
+    .box {
         grid-template-columns: 1fr;
+        gap: 24px;
+        margin: 0 16px;
+    }
+
+    .grid {
+        min-width: 0;
+    }
+
+    .grid img {
+        width: 100%;
+        height: auto;
+        max-height: 240px;
+    }
+
+    .cardtext {
+        padding-top: 20px;
+        text-align: center;
     }
 }
 
