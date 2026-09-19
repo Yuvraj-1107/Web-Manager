@@ -1,39 +1,55 @@
 @import url('https://googleapis.com');
 
+:root {
+    --bg-1: #060a14;
+    --bg-2: #0c1230;
+    --surface: #0f1730;
+    --cyan: #22d3ee;
+    --lime: #c7fa7f;
+    --violet: #8b7cff;
+    --text: #e8eefc;
+    --muted: #a9b6d3;
+}
+
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-body{
-    
+html {
+    -webkit-text-size-adjust: 100%;
+    color-scheme: dark;
+}
+
+body {
+    background:
+        radial-gradient(800px 500px at 90% -5%, rgba(139, 124, 255, .22), transparent 60%),
+        radial-gradient(700px 450px at -5% 35%, rgba(34, 211, 238, .16), transparent 60%),
+        linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
+    background-attachment: fixed;
+    background-color: var(--bg-1);
+    overflow-x: hidden;
 }
 
 header {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: x-large;
-    margin-top: 5px;
-    text-decoration: underline;
-    /*  */
-  font-family: 'Krona One', sans-serif;
-    
-    /* Font sizing and layout tweaks */
-    font-size: 2.5rem;
+    padding: clamp(14px, 2.5vw, 24px) 12px;
+    background: linear-gradient(90deg, #08101f 0%, #131c44 100%);
+    border-bottom: 3px solid var(--cyan);
+    box-shadow: 0 6px 28px rgba(34, 211, 238, .22);
+
+    font-family: 'Krona One', Arial, Helvetica, sans-serif;
+    font-size: clamp(1.05rem, 3.4vw + .2rem, 2.5rem);
     font-weight: 700;
     text-transform: uppercase;
-    
-    /* THE DANGEROUS/COOL LOOK: Wide spacing with a sharp technical offset shadow */
-    letter-spacing: 6px; 
-    color: #000000; /* Solid black to stay highly readable on your cyan bar */
-    
-    /* Adds a high-contrast double shadow layer that makes it pop off the screen */
-    text-shadow: 
-        2px 2px 0px #ffffff, 
-        4px 4px 0px rgba(0, 0, 0, 0.8);
-        
-    /* Removes the basic browser underline */
-    text-decoration: none; 
+    letter-spacing: clamp(1px, .8vw, 6px);
+    line-height: 1.3;
+    color: #ffffff;
+    text-shadow:
+        2px 2px 0px var(--cyan),
+        4px 4px 0px rgba(139, 124, 255, 0.85);
+    text-decoration: none;
 }
 
 .desc {
@@ -46,18 +62,19 @@ header {
     padding: 32px;
     border: 2px solid black;
     height: 70vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.353), rgba(0, 0, 0, 0.436)), url(https://www.kiet.edu/_next/image/?url=%2Fassets%2Fimages%2Fkiet%2Fmain%2Fnew%2FWEB%20Banner.webp&w=3840&q=75&dpl=dpl_Aa5kQpUMDyFfkcsJM5u7K7e145SH);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.433), rgba(0, 0, 0, 0.536)), url(https://www.kiet.edu/_next/image/?url=%2Fassets%2Fimages%2Fkiet%2Fmain%2Fnew%2FWEB%20Banner.webp&w=3840&q=75&dpl=dpl_Aa5kQpUMDyFfkcsJM5u7K7e145SH);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 9;
+    border: 2px solid var(--cyan);
 }
 
 .Upper {
     color: black;
     /* font-style: italic; */
     /* font-weight: bolder; */
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,20 +85,23 @@ header {
       letter-spacing: 2px;
       
       /* The Magic Translucent Formula: */
-      /* color: rgba(255, 255, 255, 0.25); Low opacity white */
-      /* backdrop-filter: blur(4px);        Softens the background details behind text */
-      /* mix-blend-mode: overlay;           Blends beautifully with background colors */
-      
-      /* Subtle border texture around letters */
-      /* -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4); */ 
-      color: rgba(237, 231, 231, 0.91);   
-    backdrop-filter: blur(28px);          /* Blurs the image shapes *behind* the letters */
-    -webkit-backdrop-filter: blur(6px);  /* Safari support */
-    mix-blend-mode: overlay;             /* Blends text contrast with the image colors */
-    
+    /* color: rgba(255, 255, 255, 0.25); Low opacity white */
+    /* backdrop-filter: blur(4px);        Softens the background details behind text */
+    /* mix-blend-mode: overlay;           Blends beautifully with background colors */
+
+    /* Subtle border texture around letters */
+    /* -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4); */
+    color: rgba(237, 231, 231, 0.91);
+    backdrop-filter: blur(28px);
+    /* Blurs the image shapes *behind* the letters */
+    -webkit-backdrop-filter: blur(6px);
+    /* Safari support */
+    mix-blend-mode: overlay;
+    /* Blends text contrast with the image colors */
+
     /* 2. Sharp letter outline for legibility */
     -webkit-text-stroke: 1.5px rgb(255, 255, 255);
-     font-size: 35px;
+    font-size: 35px;
     /* 3. Recommended styling details for maximum coolness */
     font-weight: 800;
     text-transform: uppercase;
@@ -89,47 +109,130 @@ header {
 }
 
 .subhead {
-    margin-top: 15vh;
+    margin: clamp(40px, 9vw, 15vh) 16px 0;
     text-align: center;
-    font-weight: bolder;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: xx-large;
+    font-family: 'Krona One', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.05rem, .85rem + 1.3vw, 1.8rem);
+    letter-spacing: 1px;
+    line-height: 1.4;
+    color: #ffffff;
+    text-shadow: 0 0 18px rgba(34, 211, 238, .45);
     text-decoration: underline;
+    text-decoration-color: var(--lime);
+    text-decoration-thickness: 5px;
+    text-underline-offset: 8px;
 }
 
 .container {
-    margin-top: 20vh;
-    /* border: 2px solid black; */
+    margin-top: clamp(28px, 6vw, 12vh);
 }
 
 .box {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 120px;
-    margin-left: 80px;
-    margin-right: 150px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(18px, 3.5vw, 64px);
+    width: min(1300px, 100%);
+    margin: 0 auto;
+    padding: 0 clamp(16px, 4vw, 48px);
 }
 
 .grid {
-    /* height: 300px; */
-    /* width: 25vw; */
-    /* height: 60vh; */
-    padding: 10px;
-    border: 2px solid black;
-    border-radius: 10px;
+    min-width: 0;
+    padding: 12px;
+    border: 2px solid var(--cyan);
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(199, 250, 127, 0.51);
+    background-color: var(--surface);
+    background-image: linear-gradient(160deg, rgba(34, 211, 238, 0.14), rgba(139, 124, 255, 0.16));
+    box-shadow: 6px 6px 0 rgba(199, 250, 127, 0.9);
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
 
-@media screen and (max-width: 768px) {
-    header {
-        font-size: large;
-    }
+.grid:hover {
+    transform: translate(-3px, -3px);
+    border-color: var(--lime);
+    box-shadow: 9px 9px 0 rgba(139, 124, 255, 0.95), 0 0 28px rgba(34, 211, 238, .3);
+}
 
+.grid a {
+    display: block;
+    width: 100%;
+    border-radius: 6px;
+}
+
+.grid a:focus-visible {
+    outline: 3px solid var(--lime);
+    outline-offset: 3px;
+}
+
+
+.grid img {
+    display: block;
+    border: 2px solid var(--cyan);
+    border-radius: 6px;
+    width: 100%;
+    height: clamp(150px, 16vw, 230px);
+    object-fit: contain;
+    object-position: center;
+    background: #ffffff;
+}
+
+.cardtext {
+    font-family: 'Space Grotesk', 'Segoe UI', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(.95rem, .9rem + .25vw, 1.08rem);
+    letter-spacing: .2px;
+    line-height: 1.7;
+    color: var(--text);
+    padding: 5px;
+    padding-top: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.lowertext {
+     display: block;
+    width: max-content;
+    max-width: calc(100vw - 32px);
+    margin-top: clamp(48px, 10vh, 110px);
+    margin-left: auto;
+    margin-right: clamp(16px, 3vw, 40px);
+    padding: 20px 24px;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-weight: 700;
+    font-size: clamp(1.05rem, 2vw, 1.8rem);
+    font-style: italic;
+    letter-spacing: .5px;
+    border: 2px solid var(--cyan);
+    background-image: url(https://media.istockphoto.com/id/480975194/photo/sunrise-and-dramatic-clouds-over-lavender-field.jpg?s=612x612&w=0&k=20&c=9oOUcyMJrutCRxdOp0HYUz0avbuT4akmwKvL-aa_QkI=);
+    background-color: #4b3fa8;
+    background-position: center;
+    background-size: cover;
+    color: cyan;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    text-align: right;
+    border-radius: 12px;
+    box-shadow: 0 0 28px rgba(139, 124, 255, .35);
+}
+
+.fake {
+    height: clamp(40px, 10vh, 120px);
+}
+
+@media screen and (max-width: 980px) {
+    .box {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 620px) {
     .desc {
         min-height: 45vh;
         height: auto;
@@ -142,89 +245,30 @@ header {
         line-height: 1.4;
     }
 
-    .subhead {
-        margin: 48px 16px 0;
-        font-size: 1.5rem;
-    }
-
-    .container {
-        margin-top: 48px;
-    }
-
     .box {
-        grid-template-columns: 1fr;
-        gap: 24px;
-        margin: 0 16px;
-    }
-
-    .grid {
-        min-width: 0;
+        grid-template-columns: minmax(0, 1fr);
+        padding: 0 16px;
     }
 
     .grid img {
-        width: 100%;
         height: auto;
         max-height: 240px;
+        min-height: 150px;
     }
 
-    .cardtext {
-        padding-top: 20px;
-        text-align: center;
-    }
-}
-
-.grid img {
-    /* position: relative; */
-    /* display: block; */
-    border: 2px solid black;
-    border-radius: 5px;
-    width: 100%;
-    height: 90%;
-    object-fit: contain;
-    object-position: center;
-}
-
-.cardtext {
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    color: black;
-    font-weight: bolder;
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 40px;
-}
-
-.lowertext {
-    display: block;
-    width: max-content;
-    max-width: calc(100vw - 32px);
-    margin-top: 10vh;
-    margin-left: auto;
-    /* margin-right: 24px; */
-    padding: 20px 24px;
-    font-size: clamp(1.1rem, 2vw, 1.8rem);
-    font-style: italic;
-    border: 2px solid black;
-    background-image: url(https://media.istockphoto.com/id/480975194/photo/sunrise-and-dramatic-clouds-over-lavender-field.jpg?s=612x612&w=0&k=20&c=9oOUcyMJrutCRxdOp0HYUz0avbuT4akmwKvL-aa_QkI=);
-    background-position: center;
-    background-size: cover;
-    color: cyan;
-    text-align: right;
-    border-radius: 12px;
-}
-
-@media screen and (max-width: 768px) {
     .lowertext {
-        margin-top: 8vh;
-        /* margin-right: 12px; */
+        margin-right: 12px;
         padding: 14px 16px;
-        font-size: 1rem;
-        max-width: 220px;
+        max-width: 240px;
     }
 }
 
-.fake {
-    height: 20vh;
+@media (prefers-reduced-motion: reduce) {
+    .grid {
+        transition: none;
+    }
+
+    .grid:hover {
+        transform: none;
+    }
 }
