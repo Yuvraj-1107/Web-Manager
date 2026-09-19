@@ -7,6 +7,10 @@
     <title>KIET- WEB MANAGER</title>
     <meta name="description" content="This website is for managing all KIET website at one place.">
     <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#0a1030">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="icons/icon-192.png">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
 </head>
 
 <body>
@@ -67,6 +71,13 @@
     </main>
     <footer class="lowertext">Founder:- Divyanshi Sharma</footer>
     <div class="fake"></div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('sw.js');
+            });
+        }
+    </script>
 </body>
 
 </html>
