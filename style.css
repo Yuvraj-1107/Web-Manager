@@ -1,32 +1,12 @@
 @import url('https://googleapis.com');
 
-:root {
-    --bg-1: #060a14;
-    --bg-2: #0c1230;
-    --surface: #0f1730;
-    --cyan: #22d3ee;
-    --lime: #c7fa7f;
-    --violet: #8b7cff;
-    --text: #e8eefc;
-    --muted: #a9b6d3;
-}
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
-
 body{
-    font-family: 'Space Grotesk', 'Segoe UI', Arial, sans-serif;
-    color: var(--text);
-    background:
-        radial-gradient(800px 500px at 90% -5%, rgba(139, 124, 255, .22), transparent 60%),
-        radial-gradient(700px 450px at -5% 35%, rgba(34, 211, 238, .16), transparent 60%),
-        linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
-    background-attachment: fixed;
-    background-color: var(--bg-1);
-    overflow-x: hidden;
+    
 }
 
 header {
@@ -82,6 +62,18 @@ header {
     justify-content: center;
     align-items: center;
     /* font-size: clamp(1.4rem, 3vw, 30px); */
+    /* font-family: 'Syne', sans-serif;
+      font-size: 35px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      
+      /* The Magic Translucent Formula: */
+      /* color: rgba(255, 255, 255, 0.25); Low opacity white */
+      /* backdrop-filter: blur(4px);        Softens the background details behind text */
+      /* mix-blend-mode: overlay;           Blends beautifully with background colors */
+      
+      /* Subtle border texture around letters */
+      /* -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4); */ 
       color: rgba(237, 231, 231, 0.91);   
     backdrop-filter: blur(28px);          /* Blurs the image shapes *behind* the letters */
     -webkit-backdrop-filter: blur(6px);  /* Safari support */
