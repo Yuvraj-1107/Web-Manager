@@ -78,32 +78,33 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* font-size: clamp(1.4rem, 3vw, 30px); */
-    /* font-family: 'Syne', sans-serif;
-      font-size: 35px;
+    font-size: clamp(1.4rem, 3vw, 30px);
+     font-family: 'Syne', sans-serif;
+      font-size: 25px;
       font-weight: 800;
       letter-spacing: 2px;
       
       /* The Magic Translucent Formula: */
-    /* color: rgba(255, 255, 255, 0.25); Low opacity white */
-    /* backdrop-filter: blur(4px);        Softens the background details behind text */
-    /* mix-blend-mode: overlay;           Blends beautifully with background colors */
+    color: rgba(255, 255, 255, 0.879); 
+    backdrop-filter: blur(5px);        
+    mix-blend-mode: overlay;          
 
     /* Subtle border texture around letters */
-    /* -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4); */
-    color: rgba(237, 231, 231, 0.91);
-    backdrop-filter: blur(28px);
+    -webkit-text-stroke: 1px rgba(241, 234, 234, 0.801);
+
+    /* color: rgba(237, 231, 231, 0.91);
+    backdrop-filter: blur(28px); */
     /* Blurs the image shapes *behind* the letters */
-    -webkit-backdrop-filter: blur(6px);
+    /* -webkit-backdrop-filter: blur(6px); */
     /* Safari support */
-    mix-blend-mode: overlay;
+    /* mix-blend-mode: overlay; */
     /* Blends text contrast with the image colors */
 
     /* 2. Sharp letter outline for legibility */
-    -webkit-text-stroke: 1.5px rgb(255, 255, 255);
-    font-size: 35px;
+    /* -webkit-text-stroke: 1.5px rgb(255, 255, 255);
+    font-size: 35px; */
     /* 3. Recommended styling details for maximum coolness */
-    font-weight: 800;
+    /* font-weight: 800; */
     text-transform: uppercase;
 
 }
@@ -112,7 +113,7 @@ header {
     margin: clamp(40px, 9vw, 15vh) 16px 0;
     text-align: center;
     font-family: 'Krona One', Arial, Helvetica, sans-serif;
-    font-weight: 400;
+    font-weight: 900;
     font-size: clamp(1.05rem, .85rem + 1.3vw, 1.8rem);
     letter-spacing: 1px;
     line-height: 1.4;
