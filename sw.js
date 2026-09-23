@@ -11,7 +11,8 @@ const LOCAL = [
   'icons/icon-512.png',
   'icons/icon-maskable-512.png',
   'Screenshot 2026-09-19 180657.png',
-  'Screenshot 2026-09-19 001601.png'
+  'Screenshot 2026-09-19 001601.png',
+  'Screenshot 2026-09-23 210940.png'
 ];
 
 // Outside images and fonts used by the page (saved as "opaque" copies)
